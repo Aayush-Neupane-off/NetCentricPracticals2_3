@@ -19,5 +19,17 @@ namespace Unit3_Practical.Controllers
             // Pass model to the view
             return View(student);
         }
+        public IActionResult Details(int id)
+        {
+            var student = new Student
+            {
+                Id = id,
+                Name = "Rajendra Manandhar ",
+                Age = 23,
+                Course = "BIT"
+            };
+
+            return View(student);
+        }
     }
 }

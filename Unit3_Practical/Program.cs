@@ -21,6 +21,12 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
+    name: "StudentDetails",
+    pattern: "student-info/{id}",
+    defaults: new { controller = "Student", action = "Details" });
+
+
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
